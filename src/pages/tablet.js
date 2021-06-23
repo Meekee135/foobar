@@ -2,7 +2,7 @@ import Order from "../Order";
 import BeerPreview from "../BeerPreview";
 import BeerList from "../BeerList";
 import Guests from "../Guests";
-import LiveChat from "../LiveChat";
+// import LiveChat from "../LiveChat";
 import { useEffect, useState } from "react";
 import React from "react";
 
@@ -243,7 +243,7 @@ const Tablet = () => {
           }}
         ></button>
         <Order handlePosting={handlePosting} orders={orders} missing={missing} filled={filled} payments={payments} />
-        <LiveChat />
+        {/* <LiveChat /> */}
       </div>
     </div>
   );
