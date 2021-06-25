@@ -197,7 +197,7 @@ const Tablet = () => {
   return (
     // <div className={`Grid_Container ${theme ? "Dark_Theme" : "Light_Theme"}`}>
     <div className="Grid_Container Dark_Theme">
-      {/* <div className="Position_Grid" /> */}
+      <div className="Position_Grid" />
       <Guests
         focusing={(e) => {
           let index = e.target.dataset.index;

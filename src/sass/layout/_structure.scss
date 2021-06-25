@@ -5,10 +5,12 @@
 }
 html {
   height: 100vh;
+  box-sizing: border-box;
   // overflow: hidden;
 }
 
 .Grid_Container {
+  box-sizing: border-box;
   height: 100%;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
