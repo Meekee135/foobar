@@ -11,7 +11,7 @@ const Tablet = () => {
   const [focus, setFocus] = useState(0);
   const [detail, setDetail] = useState([]);
   const [prices, setPrices] = useState([]);
-  const [theme, themeToggle] = useState(true);
+  // const [theme, themeToggle] = useState(true);
   const [guest, setGuest] = useState(1);
   const [form, setForm] = useState(null);
   const [baskets, setBaskets] = useState([[], [], [], []]);
@@ -195,7 +195,8 @@ const Tablet = () => {
     };
   }, []);
   return (
-    <div className={`Grid_Container ${theme ? "Dark_Theme" : "Light_Theme"}`}>
+    // <div className={`Grid_Container ${theme ? "Dark_Theme" : "Light_Theme"}`}>
+    <div className="Grid_Container Dark_Theme">
       <div className="Position_Grid" />
       <Guests
         focusing={(e) => {
