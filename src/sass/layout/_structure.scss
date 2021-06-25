@@ -4,13 +4,13 @@
   padding: 0;
 }
 html {
-  height: 100vh;
+  // height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   // overflow: hidden;
 }
 
 .Grid_Container {
-  height: 100vh;
+  // height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   display: grid;
   grid-template-columns: minmax(0, 1fr);

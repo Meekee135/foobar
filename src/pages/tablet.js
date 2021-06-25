@@ -23,7 +23,7 @@ const Tablet = () => {
   useEffect(() => {
     window.addEventListener('resize', () => {
       let vh = window.innerHeight * 0.01;
-      document.querySelector('.Grid_Container').style.setProperty('--vh', `${vh}px`)
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
     })
   })
   useEffect(() => {
