@@ -16,7 +16,7 @@ html {
   height: calc(var(--vh, 1vh) * 100);
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: minmax(0, 10vh) minmax(0, 80vh) minmax(0, 10vh);
+  grid-template-rows: minmax(0, 10%) minmax(0, 80%) minmax(0, 10%);
   gap: 0px 0px;
   align-items: start;
   grid-template-areas:
