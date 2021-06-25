@@ -19,7 +19,7 @@ const Tablet = () => {
   // const [orders, setOrders] = useState([]);
   let beerPrice = prices.find((el) => el.name === beers[focus].beer);
   let filled = baskets.filter((el) => el.length > 0).map((el) => baskets.indexOf(el) + 1);
-  let missing = filled.filter((el) => !payments.includes(el));
+  // let missing = filled.filter((el) => !payments.includes(el));
   useEffect(() => {
     if (baskets[guest - 1].length === 0) {
       setForm(null);
