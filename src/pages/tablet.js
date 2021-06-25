@@ -1,4 +1,4 @@
-import Order from "../Order";
+// import Order from "../Order";
 import BeerPreview from "../BeerPreview";
 import BeerList from "../BeerList";
 import Guests from "../Guests";
@@ -16,7 +16,7 @@ const Tablet = () => {
   const [form, setForm] = useState(null);
   const [baskets, setBaskets] = useState([[], [], [], []]);
   const [payments, setPayments] = useState([]);
-  const [orders, setOrders] = useState([]);
+  // const [orders, setOrders] = useState([]);
   let beerPrice = prices.find((el) => el.name === beers[focus].beer);
   let filled = baskets.filter((el) => el.length > 0).map((el) => baskets.indexOf(el) + 1);
   let missing = filled.filter((el) => !payments.includes(el));
@@ -98,45 +98,45 @@ const Tablet = () => {
     });
   };
 
-  const handlePosting = () => {
-    if (!missing.length > 0) {
-      let order = [];
-      baskets.forEach((basket) => {
-        if (basket.length > 0) {
-          basket.forEach((el) => {
-            order.push({
-              name: el.name,
-              amount: el.amount,
-            });
-          });
-        } else {
-          return;
-        }
-      });
-      // console.log(order);
-      const postData = JSON.stringify(order);
-      fetch("https://pivobar.herokuapp.com/order", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json; charset=utf-8",
-          // "cache-control": "no-cache",
-        },
-        body: postData,
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          setBaskets([[], [], [], []]);
-          setGuest(1);
-          setPayments([]);
-          setForm(null);
-          setOrders((prev) => [...prev, data.id]);
-          console.log(data);
-        });
-    } else {
-      console.log("sth not payed");
-      return;
-    }
-  };
+  // const handlePosting = () => {
+  //   if (!missing.length > 0) {
+  //     let order = [];
+  //     baskets.forEach((basket) => {
+  //       if (basket.length > 0) {
+  //         basket.forEach((el) => {
+  //           order.push({
+  //             name: el.name,
+  //             amount: el.amount,
+  //           });
+  //         });
+  //       } else {
+  //         return;
+  //       }
+  //     });
+  //     // console.log(order);
+  //     const postData = JSON.stringify(order);
+  //     fetch("https://pivobar.herokuapp.com/order", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json; charset=utf-8",
+  //         // "cache-control": "no-cache",
+  //       },
+  //       body: postData,
+  //     })
+  //       .then((res) => res.json())
+  //       .then((data) => {
+  //         setBaskets([[], [], [], []]);
+  //         setGuest(1);
+  //         setPayments([]);
+  //         setForm(null);
+  //         setOrders((prev) => [...prev, data.id]);
+  //         console.log(data);
+  //       });
+  //   } else {
+  //     console.log("sth not payed");
+  //     return;
+  //   }
+  // };
 
   useEffect(() => {
     const abortController = new AbortController();
@@ -243,7 +243,7 @@ const Tablet = () => {
             themeToggle(!theme);
           }}
         ></button> */}
-        <Order handlePosting={handlePosting} orders={orders} missing={missing} filled={filled} payments={payments} />
+        {/* <Order handlePosting={handlePosting} orders={orders} missing={missing} filled={filled} payments={payments} /> */}
         {/* <LiveChat /> */}
       </div>
     </div>
