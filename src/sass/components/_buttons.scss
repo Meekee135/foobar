@@ -49,7 +49,7 @@
 }
 .orderNumber {
   color: var(--header-fill);
-  -webkit-text-stroke: 0.05px var(--header-color);
+  -webkit-text-stroke: 0.5px var(--header-color);
   letter-spacing: 3px;
   font-size: 2.6em;
   position: absolute;
@@ -60,7 +60,6 @@
   transform-style: preserve-3d;
   transition: transform 0.8s;
   user-select: none;
-  z-index: 10;
   &:nth-of-type(1) {
     top: -60%;
   }
