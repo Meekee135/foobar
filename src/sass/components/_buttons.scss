@@ -19,61 +19,66 @@
 ////TODO:orders
 
 .Order {
-  // background-color: red;
-  height: 200%;
+  min-height: 100%;
   width: 30%;
   position: relative;
-  transform: translateX(-50%);
-  left: 50%;
 }
-.PlaceOrderButton {
+.Numbers{
   position: absolute;
-  transform: translateX(-50%);
-  left: 50%;
-  font-size: 2.6em;
-  color: var(--accent-fill);
-  -webkit-text-stroke: 1.5px var(--accent-color);
-  letter-spacing: 3px;
-  white-space: nowrap;
-  cursor: pointer;
-  transform-origin: bottom;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  transition: all 0.8s;
-  &.disable {
-    -webkit-text-stroke: 1.5px grey;
-  }
-  &.flipped {
-    transform: translateX(-50%) rotateX(180deg);
+  height: min-content;
+  width: 100%;
+  transform: translateY(-100%);
+  display: flex;
+  flex-direction: column;
+  .orderNumber {
+    color: var(--header-fill);
+    -webkit-text-stroke: 1px var(--header-color);
+    letter-spacing: 3px;
+    font-size: 2.6em;
+    user-select: none;
+    transition: all .5s;
+    &:nth-of-type(1) {
+      top: -60%;
+    }
+    &:nth-of-type(2) {
+      top: -90%;
+    }
+    &:nth-of-type(3) {
+      top: -120%;
+    }
+    &:nth-of-type(4) {
+      top: -150%;
+    }
+    &.reveal {
+      transform: translateX(-50%);
+    }
   }
 }
-.orderNumber {
-  color: var(--header-fill);
-  -webkit-text-stroke: 1px var(--header-color);
-  letter-spacing: 3px;
-  font-size: 2.6em;
-  position: absolute;
-  transform: translateX(-50%);
-  left: 50%;
-  transform-origin: bottom;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  transition: transform 0.8s;
-  user-select: none;
-  &:nth-of-type(1) {
-    top: -60%;
-  }
-  &:nth-of-type(2) {
-    top: -90%;
-  }
-  &:nth-of-type(3) {
-    top: -120%;
-  }
-  &:nth-of-type(4) {
-    top: -150%;
-  }
-  &.reveal {
+.buttonBox{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  .PlaceOrderButton {
+    position: absolute;
     transform: translateX(-50%);
+    left: 50%;
+    font-size: 2.6em;
+    color: var(--accent-fill);
+    -webkit-text-stroke: 1.5px var(--accent-color);
+    letter-spacing: 3px;
+    white-space: nowrap;
+    cursor: pointer;
+    transform-origin: bottom;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: all 0.8s;
+    &.disable {
+      -webkit-text-stroke: 1.5px grey;
+    }
+    &.flipped {
+      transform: translateX(-50%) rotateX(180deg);
+    }
   }
 }
 

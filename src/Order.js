@@ -18,6 +18,7 @@ const Order = ({ handlePosting, orders, missing, filled, payments }) => {
     //   </div>
     // </div>
     <div className="Order">
+      <div className="Numbers">
       {orders.length > 0
         ? orders.map((order) => (
             <h1 key={order} className="orderNumber">
@@ -25,9 +26,12 @@ const Order = ({ handlePosting, orders, missing, filled, payments }) => {
             </h1>
           ))
         : ""}
+      </div>
+      <div className="buttonBox">
       <button className={`PlaceOrderButton ${missing.length > 0 || filled.length === 0 ? "disable" : ""} ${payments.length > 0 ? "" : "flipped"}`} onClick={handlePosting}>
         Place Order
       </button>
+      </div>
     </div>
   );
 };
