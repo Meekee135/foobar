@@ -26,6 +26,9 @@ const Tablet = () => {
     window.addEventListener('resize', () => {
       document.documentElement.style.setProperty('--vh', `${vh}px`)
     })
+    window.addEventListener('orientationchange', () => {
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    })
   })
   useEffect(() => {
     if (baskets[guest - 1].length === 0) {
