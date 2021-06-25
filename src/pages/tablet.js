@@ -236,12 +236,12 @@ const Tablet = () => {
         <BeerPreview beers={beers} prices={prices} details={detail} focus={focus} onClick={handleAdding} />
       </div>
       <div className="Footer_Content">
-        <button
+        {/* <button
           className={`Theme_Toggle ${theme ? "Theme_Toggle_Moon" : "Theme_Toggle_Sun"}`}
           onClick={() => {
             themeToggle(!theme);
           }}
-        ></button>
+        ></button> */}
         <Order handlePosting={handlePosting} orders={orders} missing={missing} filled={filled} payments={payments} />
         {/* <LiveChat /> */}
       </div>
