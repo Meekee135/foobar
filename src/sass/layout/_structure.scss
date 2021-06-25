@@ -5,7 +5,8 @@
 }
 html {
   height: 100vh;
-  overflow: hidden;
+  height: calc(var(--vh, 1vh) * 100);
+  // overflow: hidden;
 }
 
 .Grid_Container {
