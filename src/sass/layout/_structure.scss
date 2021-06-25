@@ -5,16 +5,14 @@
 }
 html {
   height: 100vh;
-  box-sizing: border-box;
   // overflow: hidden;
 }
 
 .Grid_Container {
-  box-sizing: border-box;
   height: 100%;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: minmax(0, 10%) minmax(0, 80%) minmax(0, 10%);
+  grid-template-rows: minmax(0, 10vh) minmax(0, 80vh) minmax(0, 10vh);
   gap: 0px 0px;
   align-items: start;
   grid-template-areas:
