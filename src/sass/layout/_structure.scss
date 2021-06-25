@@ -5,14 +5,14 @@
 }
 html {
   box-sizing: border-box;
-  // height: 100vh;
+  height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
 }
 
 .Grid_Container {
   box-sizing: border-box;
-  // height: 100vh;
+  height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   display: grid;
   grid-template-columns: minmax(0, 1fr);

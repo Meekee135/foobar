@@ -26,7 +26,9 @@ const Tablet = () => {
       document.documentElement.style.setProperty('--vh', `${vh}px`)
     })
     window.addEventListener('onload', () => {
-      document.documentElement.style.setProperty('--vh', `${vh}px`)
+      setTimeout(() => {
+        document.documentElement.style.setProperty('--vh', `${vh}px`)
+      }, 500);
     })
   })
   useEffect(() => {
