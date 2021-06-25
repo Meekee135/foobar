@@ -9,7 +9,8 @@ html {
 }
 
 .Grid_Container {
-  height: 100%;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-rows: minmax(0, 10vh) minmax(0, 80vh) minmax(0, 10vh);
@@ -25,7 +26,7 @@ html {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-auto-flow: column;
-  grid-template-rows: 1fr;
+  grid-template-rows: minmax(0,1fr);
   z-index: 3;
   pointer-events: none;
   width: 100%;
