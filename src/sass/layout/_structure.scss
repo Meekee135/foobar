@@ -9,7 +9,7 @@ html {
 }
 
 .Grid_Container {
-  height: 100vh;
+  height: 100%;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-rows: minmax(0, 10%) minmax(0, 80%) minmax(0, 10%);
