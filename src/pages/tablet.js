@@ -21,8 +21,11 @@ const Tablet = () => {
   let filled = baskets.filter((el) => el.length > 0).map((el) => baskets.indexOf(el) + 1);
   let missing = filled.filter((el) => !payments.includes(el));
   useEffect(() => {
+    let vh = window.innerHeight * 0.01;
     window.addEventListener('resize', () => {
-      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    })
+    window.addEventListener('onload', () => {
       document.documentElement.style.setProperty('--vh', `${vh}px`)
     })
   })
